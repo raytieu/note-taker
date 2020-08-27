@@ -18,7 +18,7 @@ app.get("/notes", function (req, res) {
   res.sendFile(path.join(__dirname, "/public/notes.html"));
 });
 
-app.get("/api/", function(req, res) {
+app.get("/api/notes", function(req, res) {
   res.json(noteData);
 });
 
@@ -28,7 +28,8 @@ app.post("/api/notes", function(req, res) {
 });
 
 app.delete("/api/notes/:id", function(req, res) {
-
+  // noteData.splice(req.params.id);
+  // res.json(true);  
 });
 
 
